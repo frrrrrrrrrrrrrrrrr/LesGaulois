@@ -18,7 +18,7 @@ public class Romain {
 	}
 
 	private String prendreParole() {
-		return "Le Romain " + nom + ":";
+		return "Le Romain " + nom + ": ";
 	}
 	
 	public void recevoirCoup( int forceCoup) {
@@ -28,6 +28,11 @@ public class Romain {
 		} else {
 			parler("J'abandonne...");
 		}
+	}
+	
+	public static void main(String[] args) {
+		Romain claude = new Romain("Claude", 4);
+		
 	}
 	
 }

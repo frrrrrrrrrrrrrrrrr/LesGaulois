@@ -21,12 +21,12 @@ public class Chef {
 	}
 
 	private String prendreParole() {
-		return "Le Chef" + nom + ":";
+		return "Le Chef " + nom + ": ";
 		
 	}
 	
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie in grand coup dans la mâchoire de " + romain.getNom());
+		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
 		romain.recevoirCoup(force / 3);
 		
 	}
