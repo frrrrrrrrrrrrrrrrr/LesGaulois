@@ -5,6 +5,9 @@ public class Romain {
 	private int force;
 
 	public Romain(String nom, int force) {
+		if (force < 0) {
+			throw new IllegalArgumentException("Force négative " + force);
+		}
 		this.nom = nom;
 		this.force = force;
 	}
@@ -22,11 +25,20 @@ public class Romain {
 	}
 	
 	public void recevoirCoup( int forceCoup) {
+		if(force<0) {
+			throw new IllegalArgumentException("Force négative " + force);
+		}
+		int ancienneForce = force;
+		
 		force -= forceCoup;
 		if (force > 0) {
 			parler("Aï¿½e");
 		} else {
 			parler("J'abandonne...");
+		}
+		
+		if(ancienneForce <= force) {
+			throw new IllegalArgumentException("La force du romain n'a pas diminuée " + ancienneForce + " -> " + force);
 		}
 	}
 	
