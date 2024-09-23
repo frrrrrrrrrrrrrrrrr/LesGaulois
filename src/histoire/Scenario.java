@@ -10,9 +10,7 @@ public class Scenario {
 		Druide panoramix = new Druide("Panoramix", 5, 10);
 		Romain minus = new Romain("Minus", 6);
 		
-		panoramix.parler("Bonjour, je suis le druide " + panoramix.getNom()+
-				" et ma potion peut aller d'une force "+ panoramix.getEffetPotionMin()
-				+ " à " + panoramix.getEffetPotionMax());
+
 		
 		panoramix.parler("Je vais aller préparer une petite potion...");
 		panoramix.preparerPotion();
