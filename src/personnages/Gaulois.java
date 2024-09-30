@@ -60,8 +60,15 @@ public class Gaulois {
 			} 
 	}
 	
-	public void faireUneDonnation(Musee musee, Equipement equipement) {
-		
+	public void faireUneDonnation(Musee musee) {
+		String donations = "";
+		if (nbTrophees > 0) {
+			for (int i = 0; i < nbTrophees; i++) {
+				musee.donnerTrophee(this, trophees[i]);
+				donations += "\n- " + trophees[i].getNom();
+			}
+			parler("Je donne au musee tous mes trophees :" + donations);
+		}
 	}
 	
 	public static void main(String[] args) {
